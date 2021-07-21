@@ -1,70 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*{
-  box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #ddd;
+	font-family: 'Roboto', sans-serif;
+	background-color: #ddd;
 }
 
 h3 {
-  text-align: center;
+	text-align: center;
 }
 
-
 form {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .form-container {
-  background-color: white;
-  margin: 200px auto;
-  width: 350px;
+	background-color: white;
+	margin: 200px auto;
+	width: 350px;
+	border-radius: 20px;
 }
 
 form .input-container {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 form .input-container input,
-input[type="submit"] {
-  width: 85%;
-  height: 40px;
-  border-radius: 20px;
+input[type='submit'] {
+	width: 85%;
+	height: 40px;
+	border-radius: 20px;
 }
 
 form .input-container input {
-  border: 1px solid #e4e4e4;
-  color: #818181;
-  padding: 0 25px;
+	border: 1px solid #e4e4e4;
+	color: #818181;
+	padding: 0 25px;
 }
 
 form .input-container input::placeholder {
-  color: #818181;
+	color: #818181;
 }
 
 form .options-container {
-  margin: 10px 0;
-  width: 250px;
-  display: flex;
-  justify-content: space-between;
+	margin: 15px 0;
+	width: 250px;
+	display: flex;
+	justify-content: space-between;
+}
+
+form input[type='submit'] {
+	border: 0;
+	background: red;
+	color: white;
+	font-weight: bold;
 }
 
 .checkbox-container {
-  font-size: 12px;
-  display: flex;
-  align-items: center;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+}
+
+.checkbox-container label {
+	font-size: 14px;
+}
+
+.options-container a {
+	color: red;
+	font-size: 14px;
+	font-weight: bold;
 }
