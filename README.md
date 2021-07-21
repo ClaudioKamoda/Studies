@@ -5,6 +5,7 @@ Repo to store my studies projects.
 ### Simple Form
 
 Simple recreation of a login form.
+Practice of using and styling **_form_** elements.
 
 #### July 18, 2021
 
