@@ -14,4 +14,4 @@ Simple recreation of a login form.
 
 -   Project Finished
 
-![Simple Form Image](https://github.com/ClaudioKamoda/Origin-Six/blob/main/Images/SimpleForm.png)
+![Simple Form Image](https://github.com/ClaudioKamoda/Studies/blob/main/Images/SimpleForm.PNG)
