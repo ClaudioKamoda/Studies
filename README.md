@@ -11,3 +11,7 @@ Practice of using and styling **_form_** elements.
 ### Pure Javascript (JS)
 
 Folder that contains some javascript codes testing functions to have a better understanding of the language.
+
+### Pomodoro Clock (HTML, CSS, JS)
+
+Implementation of a Pomodoro Clock with vanilla Javascript.

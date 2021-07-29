@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/*colors*/
+	--body-color: #df2935;
+	--strong-color: #da1a26;
+	--inside-text-color: #fff;
+	--reference: 0px;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: var(--body-color);
+	font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+#pomodoro {
+	height: 400px;
+	width: 300px;
+	border-radius: 8px;
+
+	background-color: var(--inside-text-color);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#choose {
+	font-weight: 700;
+}
+
+#counter {
+	font-size: 70px;
+	font-weight: 700;
+	padding: 20px;
+}
+
+.button-container {
+	padding: 10px;
+}
+
+button {
+	width: fit-content;
+	height: 40px;
+	border: none;
+	color: var(--inside-text-color);
+	background-color: var(--strong-color);
+	border-radius: 8px;
+	font-size: 20px;
+	font-weight: 700;
+	font-family: 'Atkinson Hyperlegible', sans-serif;
+	padding: 0 10px;
+
+	transition: 0.3s ease;
+}
+
+button:hover {
+	background-color: var(--body-color);
+	color: black;
+}
+
+.checkbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+}
+
+.checkbox input {
+	margin-right: 5px;
+}
+
+.checkbox label {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+#timer-container {
+	height: 100px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.timer-selector {
+	height: 50px;
+	width: 50px;
+	margin: 2px;
+	position: relative;
+	transition: 0.3s ease;
+}
+
+.timer-selector:hover {
+	height: 100px;
+}
+
+.timer-selector:hover .break-time {
+	top: 50px;
+}
+
+.session-time,
+.break-time {
+	height: 50px;
+	width: 50px;
+	border-radius: 5px;
+	background-color: var(--strong-color);
+	color: var(--inside-text-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.3s ease;
+}
+
+.session-time {
+	z-index: 10;
+}
+
+.break-time {
+	background-color: var(--body-color);
+	z-index: 2;
+}
+
+.session-time h6,
+.break-time h6 {
+	font-size: 10px;
+}
+
+.session-time p,
+.break-time p {
+	font-size: 20px;
+	padding-bottom: 5px;
+}
