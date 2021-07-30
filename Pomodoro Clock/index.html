@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Pomodoro Clock</title>
 		<link rel="stylesheet" href="style.css" />
+		<script src="https://unpkg.com/feather-icons"></script>
 	</head>
 	<body>
 		<div id="pomodoro">
@@ -15,12 +16,17 @@
 				</p>
 			</div>
 			<div class="button-container">
-				<button onclick="startStopTimer()">START</button>
-				<button onclick="resetTimer()">RESET</button>
+				<button onclick="startTimer()">
+					<i data-feather="play"></i>
+				</button>
+				<button onclick="pauseTimer()">
+					<i data-feather="pause"></i>
+				</button>
+				<button onclick="resetTimer()" id="reset">RESET</button>
 			</div>
 			<p id="choose">CHOOSE TIMER:</p>
 			<div id="timer-container">
-				<div class="timer-selector">
+				<div class="timer-selector" onclick="set50()">
 					<div class="session-time">
 						<h6>SESSION</h6>
 						<p>50m</p>

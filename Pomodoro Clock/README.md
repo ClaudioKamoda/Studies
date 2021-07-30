@@ -12,3 +12,4 @@ Implementation of a basic **_Pomodoro Clock_**.
 
 -   Created the main files.
 -   Finished the HTML and CSS for the project.
+-   Started the javascript logic.
