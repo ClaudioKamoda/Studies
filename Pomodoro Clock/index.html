@@ -10,10 +10,15 @@
 	</head>
 	<body>
 		<div id="pomodoro">
+			<div id="top-elements">
+				<p id="session-number">SESSION 1</p>
+				<p id="break-active">BREAK</p>
+			</div>
 			<div class="counter-container">
 				<p id="counter">
 					<span id="minutes">25</span>:<span id="seconds">00</span>
 				</p>
+				<p id="break">START BREAK?</p>
 			</div>
 			<div class="button-container">
 				<button onclick="startTimer()">
@@ -26,7 +31,7 @@
 			</div>
 			<p id="choose">CHOOSE TIMER:</p>
 			<div id="timer-container">
-				<div class="timer-selector" onclick="set50()">
+				<div class="timer-selector" onclick="setTimer(50)">
 					<div class="session-time">
 						<h6>SESSION</h6>
 						<p>50m</p>
@@ -36,7 +41,7 @@
 						<p>10m</p>
 					</div>
 				</div>
-				<div class="timer-selector">
+				<div class="timer-selector" onclick="setTimer(25)">
 					<div class="session-time">
 						<h6>SESSION</h6>
 						<p>25m</p>
@@ -46,7 +51,7 @@
 						<p>5m</p>
 					</div>
 				</div>
-				<div class="timer-selector">
+				<div class="timer-selector" onclick="setTimer(15)">
 					<div class="session-time">
 						<h6>SESSION</h6>
 						<p>15m</p>
@@ -56,7 +61,7 @@
 						<p>3m</p>
 					</div>
 				</div>
-				<div class="timer-selector">
+				<div class="timer-selector" onclick="setTimer(5)">
 					<div class="session-time">
 						<h6>SESSION</h6>
 						<p>5m</p>
@@ -66,7 +71,7 @@
 						<p>1m</p>
 					</div>
 				</div>
-				<div class="timer-selector">
+				<div class="timer-selector" onclick="setTimer(1)">
 					<div class="session-time">
 						<h6>SESSION</h6>
 						<p>1m</p>
@@ -77,11 +82,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="checkbox">
-				<input type="checkbox" name="long-break" id="long-break" />
-				<label for="long-break">LONG BREAK</label>
-			</div>
-			<button>NEXT SESSION</button>
 		</div>
 
 		<script src="main.js"></script>

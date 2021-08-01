@@ -2,10 +2,16 @@ feather.replace()
 
 const minutes = document.getElementById('minutes')
 const seconds = document.getElementById('seconds')
-const resetButton = document.getElementById('reset')
+const breakLabel = document.getElementById('break')
+const sessionTopLabel = document.getElementById('session-number')
+const breakTopLabel = document.getElementById('break-active')
 
 let secondsSTATE = 0
 let minutesSTATE = 25
+let secondsBreakSTATE = 0
+let minutesBreakSTATE = 5
+let isBreak = false
+let sessionNumber = 1
 
 let secondsCounter = 0
 let minutesCounter = 25
@@ -21,6 +27,21 @@ function updateTimer(minutesContent, secondsContent) {
 updateTimer(25, 0)
 
 function startTimer() {
+	breakLabel.classList.remove('show')
+	if (isBreak) {
+		secondsCounter = secondsBreakSTATE
+		minutesCounter = minutesBreakSTATE
+		breakTopLabel.classList.add('active')
+		sessionTopLabel.classList.remove('active')
+	} else {
+		sessionTopLabel.innerHTML = `SESSION ${sessionNumber}`
+		sessionNumber++
+		breakTopLabel.classList.remove('active')
+		sessionTopLabel.classList.add('active')
+	}
+
+	if (interval && !isBreak) return
+
 	interval = setInterval(function () {
 		playCounter()
 	}, 1000)
@@ -28,7 +49,16 @@ function startTimer() {
 
 function playCounter() {
 	let timeOver = secondsCounter == 0 && minutesCounter == 0
-	if (timeOver) return clearInterval(interval)
+	if (timeOver) {
+		if (isBreak) {
+			resetTimer()
+		} else {
+			breakLabel.classList.add('show')
+			updateTimer(minutesBreakSTATE, secondsBreakSTATE)
+			isBreak = true
+		}
+		return clearInterval(interval)
+	}
 
 	if (secondsCounter == 0) {
 		secondsCounter = 59
@@ -45,14 +75,24 @@ function pauseTimer() {
 	interval = undefined
 }
 
-function resetTimer(minutesCounter, secondsCounter) {
-	secondsCounter = 0
-	minutesCounter = 25
+function resetTimer() {
+	breakLabel.classList.remove('show')
+	isBreak = false
+	secondsCounter = secondsSTATE
+	minutesCounter = minutesSTATE
 	updateTimer(minutesCounter, secondsCounter)
+	pauseTimer()
 }
 
-function set50() {
-	secondsCounter = 0
-	minutesCounter = 50
-	updateTimer(minutesCounter, secondsCounter)
+function setTimer(min) {
+	sessionNumber = 1
+	secondsSTATE = 0
+	minutesSTATE = min
+	minutesBreakSTATE = Math.floor(min / 5) //(50-10, 25-5, 15-3, 5-1, 1-20s)
+	secondsBreakSTATE = minutesBreakSTATE > 0 ? 0 : 20
+
+	breakTopLabel.classList.remove('active')
+	sessionTopLabel.classList.add('active')
+	sessionTopLabel.innerHTML = `SESSION ${sessionNumber}`
+	resetTimer()
 }

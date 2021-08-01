@@ -11,6 +11,7 @@
 	--body-color: #df2935;
 	--strong-color: #da1a26;
 	--inside-text-color: #fff;
+	--inactive-text: #888;
 }
 
 body {
@@ -18,6 +19,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	font-weight: 700;
 	background-color: var(--body-color);
 	font-family: 'Atkinson Hyperlegible', sans-serif;
 }
@@ -35,14 +37,35 @@ body {
 	align-items: center;
 }
 
-#choose {
-	font-weight: 700;
+#top-elements {
+	display: flex;
+	justify-content: space-between;
+	width: 200px;
+	color: var(--inactive-text);
+}
+
+#session-number.active,
+#break-active.active {
+	color: black;
 }
 
 #counter {
 	font-size: 70px;
-	font-weight: 700;
-	padding: 20px;
+	padding: 5px;
+}
+
+#break {
+	opacity: 0;
+}
+
+#break.show {
+	opacity: 1;
+}
+
+.counter-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .button-container {
@@ -78,22 +101,6 @@ button:hover {
 	background-color: var(--body-color);
 	color: black;
 	cursor: pointer;
-}
-
-.checkbox {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 5px;
-}
-
-.checkbox input {
-	margin-right: 5px;
-}
-
-.checkbox label {
-	font-size: 16px;
-	font-weight: 700;
 }
 
 #timer-container {
@@ -156,5 +163,6 @@ button:hover {
 .session-time p,
 .break-time p {
 	font-size: 20px;
+	font-weight: 400;
 	padding-bottom: 5px;
 }
