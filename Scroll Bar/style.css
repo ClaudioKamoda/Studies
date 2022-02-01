@@ -1,0 +1,40 @@
+html,
+body,
+ul {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#navbar {
+	background-color: firebrick;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	/*transition: top 0.3s*/
+}
+
+#navbar ul {
+	display: flex;
+	justify-content: space-around;
+	height: 50px;
+}
+
+#navbar ul li {
+	list-style: none;
+	display: block;
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: darkgrey;
+}
+
+#navbar ul li:hover {
+	background-color: deepskyblue;
+}
+
+#content {
+	padding: 50px 20px 0;
+}
