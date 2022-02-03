@@ -10,6 +10,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	gap: 10px;
 }
 
 button {
@@ -37,7 +38,8 @@ a:hover {
 	background-color: rgb(201, 185, 162);
 }
 
-.dropdown {
+.dropdown,
+.clickable-dropdown {
 	position: relative;
 }
 
@@ -49,6 +51,7 @@ a:hover {
 	display: none;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown-content.active {
 	display: flex;
 }
