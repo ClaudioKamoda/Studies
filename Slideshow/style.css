@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.slideshow-container {
+	width: fit-content;
+	margin: 0 auto;
+	position: relative;
+}
+
+.slide {
+	display: none;
+}
+
+.prev,
+.next {
+	position: absolute;
+	top: calc(50% - 20px);
+	font-size: 30px;
+	color: white;
+	padding: 15px;
+	margin: 0 5px;
+	border-radius: 8px;
+	transition: background-color 0.3s;
+}
+
+.next {
+	right: 0;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
