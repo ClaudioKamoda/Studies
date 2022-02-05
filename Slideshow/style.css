@@ -16,6 +16,7 @@
 
 .prev,
 .next {
+	cursor: pointer;
 	position: absolute;
 	top: calc(50% - 20px);
 	font-size: 30px;
